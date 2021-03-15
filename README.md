@@ -31,7 +31,6 @@ Additionally, general [python 3.7.10](https://www.python.org/downloads/release/p
 
 ## Data Download Instructions
 To download the data please install [ParlAI](https://parl.ai/) using:\
-Display 10 random examples from the SQuAD task
 ```bash
 pip install parlai
 ```
