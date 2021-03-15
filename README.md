@@ -1,32 +1,16 @@
 # Mitigating-Gender-Bias-in-Generated-Text
--------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[ParlAI](http://parl.ai) (pronounced “par-lay”) is a python framework for
-sharing, training and testing dialogue models, from open-domain chitchat, to
-task-oriented dialogue, to visual question answering.
+This repository is setup to provide access to the code and data which was used in writing the paper [Reproducing and extending “Queens are Powerful too: Mitigating Gender Bias in Dialogue Generation”](http://parl.ai). The original paper [Queens are Powerful too: Mitigating Gender Bias in Dialogue Generation](https://arxiv.org/abs/1911.03842) utilizes [ParlAI](https://parl.ai/) for training, validating, and text generation. The model used in these papers is a 87M parameter transformer with 16 attention heads, 8 encoder layers, 8 decoder layers, and embedding size of 512. This model is pretrained on the [large Reddit](https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/) dataset  with approximately 1.7 billion comments. In all experiments conducted in this paper this pretrained model was fine tuned on the [Light](https://parl.ai/projects/light/#:~:text=The%20original%20LIGHT%20dataset%20features,interactions%20(talking%20and%20acting).) dataset with some form of data augmentation or training to mitigate the gender bias noticeable in the conversations in the game. In large corpora there is potential for text containing gender and racial bias, which the models can learn from and generate racially and gender biased text. The goal of these papers is to mitigate gender bias present in corpora and prevent model from generating gender biased text. In order to accomplish this task, the original paper came up with three bias mitigation techniques.
+-	**Counterfactual Data Augmentation**
+This augmentation method uses a set of gendered words and replaces them with their opposite. For example, it swaps king for queen or priest for priestess.
+-	**Positive-Bias Data Collection**
+This method utilizes neutral crowd sourced data to shift the gender bias to a more neutral level. Although the amount of data infusion is about 10% of the original dataset it has huge effect on shifting the bias present in the dataset.
+-	**Bias Controlled Training**
+This method puts each label into a bucket based on the type of bias present in the text. For example, if the text includes male gendered words but no female it is assigned to f0 m1 bucket, but if both female and male gendered words are present it assigns it to f1 m1 bucket. The bucket labels are added to the end or training features for the model to learn from when generating a response.
+-	**Positive-Bias Generated Data**
+This method is an extension to the original paper. For this method we originally train a model using counterfactual data augmentation and bias control training and use it generate responses to the entire training data. Then we go through the generated text and 90% of the time pick the generated responses that are neutral such as those belonging to f0 m0 bucket or f1 m1 with relatively equal number of male and female gendered words present in them. We use the neutral generated responses to reconstruct the conversations and use the neutral conversation to train a new model.
+All these bias mitigation techniques are very useful in mitigating gender bias in generated text.
 
-Its goal is to provide researchers:
-
-- **100+ popular datasets available all in one place, with the same API**, among them [PersonaChat](https://arxiv.org/abs/1801.07243), [DailyDialog](https://arxiv.org/abs/1710.03957), [Wizard of Wikipedia](https://openreview.net/forum?id=r1l73iRqKm), [Empathetic Dialogues](https://arxiv.org/abs/1811.00207), [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), [MS MARCO](http://www.msmarco.org/), [QuAC](https://www.aclweb.org/anthology/D18-1241), [HotpotQA](https://hotpotqa.github.io/), [QACNN & QADailyMail](https://arxiv.org/abs/1506.03340), [CBT](https://arxiv.org/abs/1511.02301), [BookTest](https://arxiv.org/abs/1610.00956), [bAbI Dialogue tasks](https://arxiv.org/abs/1605.07683), [Ubuntu Dialogue](https://arxiv.org/abs/1506.08909), [OpenSubtitles](http://opus.lingfil.uu.se/OpenSubtitles.php),  [Image Chat](https://arxiv.org/abs/1811.00945), [VQA](http://visualqa.org/), [VisDial](https://arxiv.org/abs/1611.08669) and [CLEVR](http://cs.stanford.edu/people/jcjohns/clevr/). See the complete list [here](https://github.com/facebookresearch/ParlAI/blob/master/parlai/tasks/task_list.py).
-- a wide set of [**reference models**](https://parl.ai/docs/agents_list.html) -- from retrieval baselines to Transformers.
-- a large [zoo of **pretrained models**](https://parl.ai/docs/zoo.html) ready to use off-the-shelf
-- seamless **integration of [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome)** for data collection and human evaluation
-- **integration with [Facebook Messenger](https://parl.ai/docs/tutorial_chat_service.html)** to connect agents with humans in a chat interface
-- a large range of **helpers to create your own agents** and train on several tasks with **multitasking**
-- **multimodality**, some tasks use text and images
-
-
-ParlAI is described in the following paper:
-[“ParlAI: A Dialog Research Software Platform", arXiv:1705.06476](https://arxiv.org/abs/1705.06476)
-or see these [more up-to-date slides](https://drive.google.com/file/d/1JfUW4AVrjSp8X8Fp0_rTTRoLxUfW0aUm/view?usp=sharing).
-
-Follow us on [Twitter](https://twitter.com/parlai_parley) and check out our [Release
-notes](https://github.com/facebookresearch/ParlAI/releases) to see the latest
-information about new features & updates, and the website
-[http://parl.ai](http://parl.ai) for further docs. For an archived list of updates,
-check out [NEWS.md](https://github.com/facebookresearch/ParlAI/blob/master/NEWS.md).
-
-<p align="center"><img width="90%" src="https://raw.githubusercontent.com/facebookresearch/ParlAI/master/docs/source/_static/img/parlai_example.png" /></p>
 
 ## Interactive Tutorial
 
