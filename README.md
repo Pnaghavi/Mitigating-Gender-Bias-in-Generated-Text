@@ -46,4 +46,4 @@ The pretrained model is automatically downloaded when using the code provided in
 parlai interactive -mf zoo:tutorial_transformer_generator/model 
 ```
 ## License
-ParlAI is MIT licensed. See the **[LICENSE](https://github.com/facebookresearch/ParlAI/blob/master/LICENSE)** file for details.
+This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
