@@ -1,13 +1,13 @@
 # Mitigating-Gender-Bias-in-Generated-Text
 
 This repository is setup to provide access to the code and data which was used in writing the paper [Reproducing and extending “Queens are Powerful too: Mitigating Gender Bias in Dialogue Generation”](http://parl.ai). The original paper [Queens are Powerful too: Mitigating Gender Bias in Dialogue Generation](https://arxiv.org/abs/1911.03842) utilizes [ParlAI](https://parl.ai/) for training, validating, and text generation. The model used in these papers is a 87M parameter transformer with 16 attention heads, 8 encoder layers, 8 decoder layers, and embedding size of 512. This model is pretrained on the [large Reddit](https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/) dataset  with approximately 1.7 billion comments. In all experiments conducted in this paper this pretrained model was fine tuned on the [Light](https://parl.ai/projects/light/#:~:text=The%20original%20LIGHT%20dataset%20features,interactions%20(talking%20and%20acting).) dataset with some form of data augmentation or training to mitigate the gender bias noticeable in the conversations in the game. In large corpora there is potential for text containing gender and racial bias, which the models can learn from and generate racially and gender biased text. The goal of these papers is to mitigate gender bias present in corpora and prevent model from generating gender biased text. In order to accomplish this task, the original paper came up with three bias mitigation techniques.
--	**Counterfactual Data Augmentation**
+-	**Counterfactual Data Augmentation**\
 This augmentation method uses a set of gendered words and replaces them with their opposite. For example, it swaps king for queen or priest for priestess.
--	**Positive-Bias Data Collection**
+-	**Positive-Bias Data Collection**\
 This method utilizes neutral crowd sourced data to shift the gender bias to a more neutral level. Although the amount of data infusion is about 10% of the original dataset it has huge effect on shifting the bias present in the dataset.
--	**Bias Controlled Training**
+-	**Bias Controlled Training**\
 This method puts each label into a bucket based on the type of bias present in the text. For example, if the text includes male gendered words but no female it is assigned to f0 m1 bucket, but if both female and male gendered words are present it assigns it to f1 m1 bucket. The bucket labels are added to the end or training features for the model to learn from when generating a response.
--	**Positive-Bias Generated Data**
+-	**Positive-Bias Generated Data**\
 This method is an extension to the original paper. For this method we originally train a model using counterfactual data augmentation and bias control training and use it generate responses to the entire training data. Then we go through the generated text and 90% of the time pick the generated responses that are neutral such as those belonging to f0 m0 bucket or f1 m1 with relatively equal number of male and female gendered words present in them. We use the neutral generated responses to reconstruct the conversations and use the neutral conversation to train a new model.
 All these bias mitigation techniques are very useful in mitigating gender bias in generated text.
 
