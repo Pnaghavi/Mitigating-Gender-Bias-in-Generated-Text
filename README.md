@@ -26,7 +26,7 @@ The dependencies for this project are all met when running the ipython notebook 
 -   [ParlAI](https://parl.ai/)
 -   [subword-nmt](https://github.com/rsennrich/subword-nmt)
 -   [Numpy](https://numpy.org/)
--   [NLTK](https://www.nltk.org/)
+-   [NLTK](https://www.nltk.org/)\
 Additionally, general [python 3.7.10](https://www.python.org/downloads/release/python-3710/) libraries need to be installed such re, copy, os, json, pickle, random, sys.
 
 ## Data Download Instructions
