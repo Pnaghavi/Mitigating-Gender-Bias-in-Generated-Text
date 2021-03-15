@@ -30,11 +30,11 @@ The dependencies for this project are all met when running the ipython notebook 
 Additionally, general [python 3.7.10](https://www.python.org/downloads/release/python-3710/) libraries need to be installed such re, copy, os, json, pickle, random, sys.
 
 ## Data Download Instructions
-To download the data please install [ParlAI](https://parl.ai/) using:\
+To download the data please install [ParlAI](https://parl.ai/) using:
 ```bash
 pip install parlai
 ```
-Once ParlAI is installed on the machine using the command below from the [paper's ParlAI page](https://parl.ai/projects/genderation_bias/) all the data from the original paper can be downloaded.\
+Once ParlAI is installed on the machine using the command below from the [paper's ParlAI page](https://parl.ai/projects/genderation_bias/) all the data from the original paper can be downloaded.
 ```bash
 parlai display_data -t light_genderation_bias
 ```
@@ -45,5 +45,7 @@ The pretrained model is automatically downloaded when using the code provided in
 ```bash
 parlai interactive -mf zoo:tutorial_transformer_generator/model 
 ```
+## General Code and Commands
+All the code and commands are provided in the ipython notebook in the src folder. In addition, [ParlAI's documentations](https://parl.ai/docs/index.html) is quite helpful for commands not used in the notebook.  
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
