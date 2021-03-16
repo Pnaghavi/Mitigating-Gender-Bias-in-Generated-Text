@@ -76,7 +76,8 @@ In addition, using neutral generated utterances with counterfactual data augment
 
 The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842)
 
-<p align="center"> Results for Each Model for F0M0 Bin</p>
+<p align="center"> Results for Each Model for F0M0 Bin<br></p>
+
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
 |                Baseline            |        5.48      |      45.14     |      13.22     |
