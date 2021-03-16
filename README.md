@@ -128,13 +128,13 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
 |                 Model              |% Generated Responses in F0M0|% Generated Responses in F1M0|% Generated Responses in F0M1|% Generated Responses in F1M1|
 |                  :-:               |              :-:            |              :-:            |              :-:            |              :-:            |
-|                Baseline            |             7.70            |             46.28           |             15.38           |             15.38           |
-|                  CDA               |             7.00            |	           44.19           |             14.83           |             15.38           |
-|                Pos Data            |             8.51            |	           49.71           |             15.37           |             15.38           |
-|           Bias Ctrl Training       |             11.40	         |             36.41           |             15.56           |             15.38           |
-|                  All               |             12.55           |             43.01           |             16.73           |             15.38           |
-|            CDA + Bias Ctrl         |             11.15           |             40.89           |             15.48           |             15.38           |
-|  CDA + Bias Ctrl + Our Gen. Data   |             11.54           |             44.64           |             16.61           |             15.38           |
+|                Baseline            |             35.11           |             29.88           |             20.38           |             14.64           |
+|                  CDA               |             38.96           |	           31.04           |             18.67           |             11.33           |
+|                Pos Data            |             36.31           |	           31.48           |             19.92           |             12.28           |
+|           Bias Ctrl Training       |             41.30	         |             34.26           |             14.82           |              9.62           |
+|                  All               |             39.41           |             35.02           |             13.41           |             12.15           |
+|            CDA + Bias Ctrl         |             41.94           |             33.74           |             14.00           |             10.32           |
+|  CDA + Bias Ctrl + Our Gen. Data   |             41.40           |             33.41           |             12.98           |             12.21           |
 
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
