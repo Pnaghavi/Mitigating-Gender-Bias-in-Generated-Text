@@ -48,7 +48,7 @@ parlai interactive -mf zoo:tutorial_transformer_generator/model
 All the code and commands for data preprocessing, training, evaluation, and paper extensions are provided in the iPython notebook in the src folder. In addition, [ParlAI's documentation](https://parl.ai/docs/index.html) is quite helpful for commands not used in the notebook.  
 
 ## Results
-Below are the results from reproducing the experiments done by Dinan et al. and for extensions to these experiments. The experiment extensions are both aimed at addressing the high time and monetary cost of positively biased data collection, which requires crowdsourcing data. The first of these extensions is fine-tuning the pretrained Reddit model on the data generated from counterfactual data augmentation and using bias controlled training to determine the impact of excluding positively biased data collection. The second extension still fine-tunes the model using counterfactual data augmentation and bias controlled training, but also includes neutral data we generate (the process for generating this data is described in the "Neutral Generated Data" section above). The results below give the percent gendered words (number of gendered words out of the total number of words in the generated responses), percent male bias (number of male gendered words out of the gendered words), and F1 score for each model for four bins: F0M0, F+M0, F0M+, and F+M+. The test data is split into bins based on the presence of gendered words in the label (the next response in the conversation). F0M0 means there are no gendered words in the label. F+M0 means there is at least one female gendered word but no male gendered words in the label. F0M+ means there are no female gendered words but at least one male gendered word in the label. F+M+ means there is at least one female and one male gendered word in the label.
+Below are the results from reproducing the experiments done by Dinan et al. and for extensions to these experiments. The experiment extensions are both aimed at addressing the high time and monetary cost of positively biased data collection, which requires crowdsourcing data. The first of these extensions is fine-tuning the pretrained Reddit model on the data generated from counterfactual data augmentation and using bias controlled training to determine the impact of excluding positively biased data collection. The second extension still fine-tunes the model using counterfactual data augmentation and bias controlled training, but also includes neutral data we generate (the process for generating this data is described in the "Neutral Generated Data" section above). The results below give the percent gendered words (number of gendered words out of the total number of words in the generated responses), percent male bias (number of male gendered words out of the gendered words), and F1 score for each model for four bins: F0M0, F+M0, F0M+, and F+M+. The test data is split into bins based on the presence of gendered words in the label (the next response in the conversation). F0M0 means there are no gendered words in the label. F+M0 means there is at least one female gendered word but no male gendered words in the label. F0M+ means there are no female gendered words but at least one male gendered word in the label. F+M+ means there is at least one female and one male gendered word in the label. Discussion of the results is included in our [paper](https://arxiv.org/abs/1911.03842).
 
 The image below shows how each bias mitigation technique is used to mitigate gender bias in the generated text. The plots separate the data into buckets used for bias controlled training to show how these techniques mitigate bias in the generated text. This plot also shows how well bias controlled training gives control to the model when generating text by telling the model what type of data it must generate via passing the bucket as part of the features in the episode.  
 
@@ -74,17 +74,19 @@ In addition, using neutral generated utterances with counterfactual data augment
   <br>
 </p>
 
-Results for Each Model for F¬0M0 Bin
-|        Model       | % Gendered Words | % Male Bias | F1 Score |
-|         :-:        |        :-:       |      :-:       |      :-:       |
-|     Baseline       |       26.424     |        -       |        -       |
-|        CDA         |       3.453      |	       -       |        -       |
-|      Pos Data      |       1.714      |	       -       |        -       |
-| Bias Ctrl Training |       1.233	    |      55.226    |        -       |
-|         All        |       0.869      |      27.828    |        -       |
-|  CDA + Bias Ctrl   |       0.869      |      27.828    |        -       |
-|  CDA + Bias Ctrl + Our Gen. Data   |       0.869      |      27.828    |        -       |
+The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842).
 
+<p align="center"> Results for Each Model for F0M0 Bin
+|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
+|                  :-:               |        :-:       |      :-:       |       :-:      |
+|                Baseline            |        5.48      |      45.14     |      13.22     |
+|                  CDA               |        5.35      |	     38.05     |      12.98     |
+|                Pos Data            |        5.94      |	     46.50     |      13.06     |
+|           Bias Ctrl Training       |        0.69	    |      56.85     |      13.59     |
+|                  All               |        0.32      |      43.53     |      13.75     |
+|            CDA + Bias Ctrl         |        0.80      |      44.96     |      14.62     |
+|  CDA + Bias Ctrl + Our Gen. Data   |        0.72      |      49.68     |      14.62     |
+</p>
 
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
