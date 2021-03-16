@@ -57,7 +57,8 @@ The image below shows how each bias mitigation technique is used to mitigate gen
   <strong>Figure 1:</strong> Results for Reproducing the Experiments in Original Paper by <a href="https://arxiv.org/abs/1911.03842">Dinan et al.</a><br>
   <br><br>  
 </p>
-This image shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniqes without the positive-biaised data augmentation, and counterfactual data augmentation and bias controlled training, adding our neutral, generated data for data augmentation. Th results suggests that adding our neutral, adding our neutral, generated data can yield simillare to better results than the All method in the orginal paper, and approximately the same or slightly higher F1 scores.  
+
+This image shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniques without the positive-biased data augmentation, and counterfactual data augmentation and bias controlled training, adding our neutral, generated data for data augmentation. The results suggest that adding neutral generated utterances instead of the crowd sourced positive-biased data collection can yield similar to better results than the All method in the original paper, and approximately the same or slightly higher F1 scores.  
 
 <p align="center">
   <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/CdaAndBiasAndNeutralDataResults.PNG">
@@ -65,5 +66,12 @@ This image shows the results from the original paper and the results from our ex
   <br><br>  
 </p>
 
+In addition, using neutral generated utterances with counterfactual data augmentation and bias controlled training techniques result in producing more gender-neutral generated text, but maintains similar control on the level of bias on generated text as was evident from the similar F1 scores it achieved in the Figure 2 for each bucket.
+
+<p align="center">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/GeneratedResponsesPerBinChart.PNG">
+  <strong>Figure 3:</strong> Percent of Generated Responses from each Model in each Bin.</a><br>
+  <br><br>  
+</p>
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
