@@ -50,7 +50,7 @@ All the code and commands for data preprocessing, training, evaluation, and pape
 ## Results
 Below are the results from reproducing the experiments done by Dinan et al. and for extensions to these experiments. The experiment extensions are both aimed at addressing the high time and monetary cost of positively biased data collection, which requires crowdsourcing data. The first of these extensions is fine-tuning the pretrained Reddit model on the data generated from counterfactual data augmentation and using bias controlled training to determine the impact of excluding positively biased data collection. The second extension still fine-tunes the model using counterfactual data augmentation and bias controlled training, but also includes neutral data we generate (the process for generating this data is described in the "Neutral Generated Data" section above). The results below give the percent gendered words (number of gendered words out of the total number of words in the generated responses), percent male bias (number of male gendered words out of the gendered words), and F1 score for each model for four bins: F0M0, F+M0, F0M+, and F+M+. The test data is split into bins based on the presence of gendered words in the label (the next response in the conversation). F0M0 means there are no gendered words in the label. F+M0 means there is at least one female gendered word but no male gendered words in the label. F0M+ means there are no female gendered words but at least one male gendered word in the label. F+M+ means there is at least one female and one male gendered word in the label. Discussion of the results is included in our [paper](https://arxiv.org/abs/1911.03842).
 
-The image below shows how each bias mitigation technique is used to mitigate gender bias in the generated text. The plots separate the data into buckets used for bias controlled training to show how these techniques mitigate bias in the generated text. This plot also shows how well bias controlled training gives control to the model when generating text by telling the model what type of data it must generate via passing the bucket as part of the features in the episode.  
+Figure 1 below shows how each bias mitigation technique is used to mitigate gender bias in the generated text. The plots separate the data into buckets used for bias controlled training to show how these techniques mitigate bias in the generated text. These plots also show how well bias controlled training gives control to the model when generating text by telling the model what type of data it must generate via passing the bucket as part of the features in the episode.  
 
 <p align="center">
   <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/ReproducibilityChartResults.PNG"><br>
@@ -58,7 +58,7 @@ The image below shows how each bias mitigation technique is used to mitigate gen
   <br> 
 </p>
 
-This image shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniques without the positive-biased data augmentation, and counterfactual data augmentation and bias controlled training, adding our neutral, generated data for data augmentation. The results suggest that adding neutral generated utterances instead of the crowd sourced positive-biased data collection can yield similar to better results than the All method in the original paper, and approximately the same or slightly higher F1 scores.  
+Figure 2 below shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniques without the positive-biased data augmentation, and counterfactual data augmentation and bias controlled training when adding our neutral, generated data for data augmentation. The results suggest that adding neutral generated utterances instead of the crowd sourced positively-biased data collection can yield similar or better results than using the "All" method (combining all 3 bias original bias mitigation techniques) from the original paper, and approximately the same or slightly higher F1 scores.  
 
 <p align="center">
   <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/CdaAndBiasAndNeutralDataResults.PNG"><br>
@@ -92,7 +92,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
   <br>
 
-**Results for Each Model for F1M0 Bin:**
+**Results for Each Model for F+M0 Bin:**
 
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
@@ -106,7 +106,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
   <br>
 
-**Results for Each Model for F0M1 Bin:**
+**Results for Each Model for F0M+ Bin:**
 
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
@@ -120,7 +120,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
   <br>
 
-**Results for Each Model for F1M1 Bin:**
+**Results for Each Model for F+M+ Bin:**
 
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
@@ -136,7 +136,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
 **Percent Model Generated Responses in Each Bin:**
 
-|                 Model              |% Generated Responses in F0M0|% Generated Responses in F1M0|% Generated Responses in F0M1|% Generated Responses in F1M1|
+|                 Model              |% Generated Responses in F0M0|% Generated Responses in F+M0|% Generated Responses in F0M+|% Generated Responses in F+M+|
 |                  :-:               |              :-:            |              :-:            |              :-:            |              :-:            |
 |                Baseline            |             35.11           |             29.88           |             20.38           |             14.64           |
 |                  CDA               |             38.96           |	           31.04           |             18.67           |             11.33           |
