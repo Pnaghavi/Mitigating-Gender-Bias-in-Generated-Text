@@ -52,8 +52,11 @@ Below are the results from reproducing the experiments done by Dinan et al. and 
 
 The image below shows how each bias mitigation technique is used to mitigate gender bias in the generated text. The plots separate the data into buckets used for bias controlled training to show how these techniques mitigate bias in the generated text. This plot also shows how well bias controlled training gives control to the model when generating text by telling the model what type of data it must generate via passing the bucket as part of the features in the episode.\
  \
-![Reproduction Plot](/images/ReproducibilityChartResults.PNG)
-*image_caption*
+<p align="center">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/ReproducibilityChartResults.PNG">
+  <b>Some Links:</b><br>
+  <br><br>  
+</p>
 
 ### Results for F+M0 Bin
 
