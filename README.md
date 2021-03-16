@@ -53,25 +53,25 @@ Below are the results from reproducing the experiments done by Dinan et al. and 
 The image below shows how each bias mitigation technique is used to mitigate gender bias in the generated text. The plots separate the data into buckets used for bias controlled training to show how these techniques mitigate bias in the generated text. This plot also shows how well bias controlled training gives control to the model when generating text by telling the model what type of data it must generate via passing the bucket as part of the features in the episode.  
 
 <p align="center">
-  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/ReproducibilityChartResults.PNG">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/ReproducibilityChartResults.PNG"><br>
   <strong>Figure 1:</strong> Results for Reproducing the Experiments in Original Paper by <a href="https://arxiv.org/abs/1911.03842">Dinan et al.</a><br>
-  <br><br>  
+  <br> 
 </p>
 
 This image shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniques without the positive-biased data augmentation, and counterfactual data augmentation and bias controlled training, adding our neutral, generated data for data augmentation. The results suggest that adding neutral generated utterances instead of the crowd sourced positive-biased data collection can yield similar to better results than the All method in the original paper, and approximately the same or slightly higher F1 scores.  
 
 <p align="center">
-  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/CdaAndBiasAndNeutralDataResults.PNG">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/CdaAndBiasAndNeutralDataResults.PNG"><br>
   <strong>Figure 2:</strong> Results for Combining all 3 Bias Mitigation Techniques vs. Counterfactual Data Augmentation and Bias Controlled Training both with and without Neutral Generated Data.</a><br>
-  <br><br>  
+  <br> 
 </p>
 
 In addition, using neutral generated utterances with counterfactual data augmentation and bias controlled training techniques result in producing more gender-neutral generated text, but maintains similar control on the level of bias on generated text as was evident from the similar F1 scores it achieved in the Figure 2 for each bucket.
 
 <p align="center">
-  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/GeneratedResponsesPerBinChart.PNG">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/GeneratedResponsesPerBinChart.PNG"><br>
   <strong>Figure 3:</strong> Percent of Generated Responses from each Model in each Bin.</a><br>
-  <br><br>  
+  <br>
 </p>
 
 ## License
