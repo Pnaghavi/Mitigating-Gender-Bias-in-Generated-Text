@@ -76,7 +76,7 @@ In addition, using neutral generated utterances with counterfactual data augment
 
 The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842)
 
-<p align="center"> Results for Each Model for F0M0 Bin<br></p>
+**Results for Each Model for F0M0 Bin:**
 
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
@@ -88,6 +88,53 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |            CDA + Bias Ctrl         |        0.80      |      44.96     |      14.62     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        0.72      |      49.68     |      14.62     |
 
+**Results for Each Model for F1M0 Bin:**
+
+|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
+|                  :-:               |        :-:       |      :-:       |       :-:      |
+|                Baseline            |        6.40      |      42.07     |      14.84     |
+|                  CDA               |        6.16      |	     33.85     |      14.27     |
+|                Pos Data            |        7.62      |	     40.88     |      14.99     |
+|           Bias Ctrl Training       |        8.76	    |      4.70      |      15.4      |
+|                  All               |        8.25      |      1.95      |      15.92     |
+|            CDA + Bias Ctrl         |        7.62      |      4.08      |      15.48     |
+|  CDA + Bias Ctrl + Our Gen. Data   |        8.44      |      5.90      |      15.4      |
+
+**Results for Each Model for F0M1 Bin:**
+
+|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
+|                  :-:               |        :-:       |      :-:       |       :-:      |
+|                Baseline            |        6.90      |      52.35     |      15.12     |
+|                  CDA               |        6.46      |	     41.53     |      14.9      |
+|                Pos Data            |        7.51      |	     53.53     |      15.41     |
+|           Bias Ctrl Training       |        7.36	    |      94.37     |      15.4      |
+|                  All               |        7.89      |      97.13     |      17.31     |
+|            CDA + Bias Ctrl         |        6.97      |      95.52     |      16.37     |
+|  CDA + Bias Ctrl + Our Gen. Data   |        6.55      |      93.41     |      16.6      |
+
+**Results for Each Model for F1M1 Bin:**
+
+|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
+|                  :-:               |        :-:       |      :-:       |       :-:      |
+|                Baseline            |        7.70      |      46.28     |      15.38     |
+|                  CDA               |        7.00      |	     44.19     |      14.83     |
+|                Pos Data            |        8.51      |	     49.71     |      15.37     |
+|           Bias Ctrl Training       |        11.40	    |      36.41     |      15.56     |
+|                  All               |        12.55     |      43.01     |      16.73     |
+|            CDA + Bias Ctrl         |        11.15     |      40.89     |      15.48     |
+|  CDA + Bias Ctrl + Our Gen. Data   |        11.54     |      44.64     |      16.61     |
+
+**Percent Model Generated Responses in Each Bin:**
+
+|                 Model              |% Generated Responses in F0M0|% Generated Responses in F1M0|% Generated Responses in F0M1|% Generated Responses in F1M1|
+|                  :-:               |              :-:            |              :-:            |              :-:            |              :-:            |
+|                Baseline            |             7.70            |             46.28           |             15.38           |             15.38           |
+|                  CDA               |             7.00            |	           44.19           |             14.83           |             15.38           |
+|                Pos Data            |             8.51            |	           49.71           |             15.37           |             15.38           |
+|           Bias Ctrl Training       |             11.40	         |             36.41           |             15.56           |             15.38           |
+|                  All               |             12.55           |             43.01           |             16.73           |             15.38           |
+|            CDA + Bias Ctrl         |             11.15           |             40.89           |             15.48           |             15.38           |
+|  CDA + Bias Ctrl + Our Gen. Data   |             11.54           |             44.64           |             16.61           |             15.38           |
 
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
