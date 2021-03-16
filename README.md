@@ -74,9 +74,9 @@ In addition, using neutral generated utterances with counterfactual data augment
   <br>
 </p>
 
-The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842).
+The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842)
 
-<p align="center"> Results for Each Model for F0M0 Bin
+<p align="center"> Results for Each Model for F0M0 Bin</p>
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
 |                  :-:               |        :-:       |      :-:       |       :-:      |
 |                Baseline            |        5.48      |      45.14     |      13.22     |
@@ -86,7 +86,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |                  All               |        0.32      |      43.53     |      13.75     |
 |            CDA + Bias Ctrl         |        0.80      |      44.96     |      14.62     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        0.72      |      49.68     |      14.62     |
-</p>
+
 
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
