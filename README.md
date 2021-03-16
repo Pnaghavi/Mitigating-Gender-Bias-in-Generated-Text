@@ -74,5 +74,17 @@ In addition, using neutral generated utterances with counterfactual data augment
   <br>
 </p>
 
+Results for Each Model for F¬0M0 Bin
+|        Model       | % Gendered Words | % Male Bias | F1 Score |
+|         :-:        |        :-:       |      :-:       |      :-:       |
+|     Baseline       |       26.424     |        -       |        -       |
+|        CDA         |       3.453      |	       -       |        -       |
+|      Pos Data      |       1.714      |	       -       |        -       |
+| Bias Ctrl Training |       1.233	    |      55.226    |        -       |
+|         All        |       0.869      |      27.828    |        -       |
+|  CDA + Bias Ctrl   |       0.869      |      27.828    |        -       |
+|  CDA + Bias Ctrl + Our Gen. Data   |       0.869      |      27.828    |        -       |
+
+
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
