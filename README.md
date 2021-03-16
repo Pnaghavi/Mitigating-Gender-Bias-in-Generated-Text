@@ -73,5 +73,6 @@ In addition, using neutral generated utterances with counterfactual data augment
   <strong>Figure 3:</strong> Percent of Generated Responses from each Model in each Bin.</a><br>
   <br><br>  
 </p>
+
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
