@@ -54,7 +54,7 @@ The image below shows how each bias mitigation technique is used to mitigate gen
 
 <p align="center">
   <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/ReproducibilityChartResults.PNG">
-  <b>Results for Reproducing the Experiments in Original Paper by <a href="https://arxiv.org/abs/1911.03842">Dinan et al.</a></b><br>
+  <strong>Figure 1:</strong> Results for Reproducing the Experiments in Original Paper by <a href="https://arxiv.org/abs/1911.03842">Dinan et al.</a><br>
   <br><br>  
 </p>
 
