@@ -75,7 +75,9 @@ In addition, using neutral generated utterances with counterfactual data augment
 </p>
 
 The tables below show the results from our [paper](https://arxiv.org/abs/1911.03842) for each model, reproducing and extending the orginal paper by [Dinan et al.](https://arxiv.org/abs/1911.03842)
-
+  
+  
+  
 **Results for Each Model for F0M0 Bin:**
 
 |                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |
@@ -88,7 +90,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |            CDA + Bias Ctrl         |        0.80      |      44.96     |      14.62     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        0.72      |      49.68     |      14.62     |
 
-\
+  
 
 **Results for Each Model for F1M0 Bin:**
 
@@ -102,7 +104,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |            CDA + Bias Ctrl         |        7.62      |      4.08      |      15.48     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        8.44      |      5.90      |      15.4      |
 
-\
+  
 
 **Results for Each Model for F0M1 Bin:**
 
@@ -116,7 +118,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |            CDA + Bias Ctrl         |        6.97      |      95.52     |      16.37     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        6.55      |      93.41     |      16.6      |
 
-\
+  
 
 **Results for Each Model for F1M1 Bin:**
 
@@ -130,7 +132,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 |            CDA + Bias Ctrl         |        11.15     |      40.89     |      15.48     |
 |  CDA + Bias Ctrl + Our Gen. Data   |        11.54     |      44.64     |      16.61     |
 
-\
+  
 
 **Percent Model Generated Responses in Each Bin:**
 
