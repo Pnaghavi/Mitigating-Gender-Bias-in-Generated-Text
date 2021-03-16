@@ -66,7 +66,7 @@ This image shows the results from the original paper and the results from our ex
   <br> 
 </p>
 
-In addition, using neutral generated utterances with counterfactual data augmentation and bias controlled training techniques result in producing more gender-neutral generated text, but maintains similar control on the level of bias on generated text as was evident from the similar F1 scores it achieved in the Figure 2 for each bucket.
+In addition, using neutral generated utterances with counterfactual data augmentation and bias controlled training techniques result in producing more gender-neutral generated text, but maintains similar control on the level of bias in the generated text, as was evident from the similar F1 scores it achieved in Figure 2 for each bucket.
 
 <p align="center">
   <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/GeneratedResponsesPerBinChart.PNG"><br>
