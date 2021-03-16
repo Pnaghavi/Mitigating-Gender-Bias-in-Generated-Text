@@ -58,11 +58,12 @@ The image below shows how each bias mitigation technique is used to mitigate gen
   <br><br>  
 </p>
 
-### Results for F+M0 Bin
-
-### Results for F0M+ Bin
-
-### Results for F+M+ Bin
+This image shows the results from the original paper and the results from our extensions to the original paper. The two extensions are using counterfactual data augmentation and bias controlled training techniqes without the positive-biaised data augmentation, and counterfactual data augmentation and bias controlled training, adding our neutral, generated data for data augmentation. Th results suggests that adding our neutral, adding our neutral, generated data can yield simillare to better results than the All method in the orginal paper, and approximately the same or slightly higher F1 scores. 
+<p align="center">
+  <img src="https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/images/CdaAndBiasAndNeutralDataResults.PNG">
+  <strong>Figure 2:</strong> Results for Combining all 3 Bias Mitigation Techniques vs. Counterfactual Data Augmentation and Bias Controlled Training both with and without Neutral Generated Data.</a><br>
+  <br><br>  
+</p>
 
 ## License
 This repository is MIT licensed. See the **[LICENSE](https://github.com/Pnaghavi/Mitigating-Gender-Bias-in-Generated-Text/blob/main/LICENSE)** file for details.
