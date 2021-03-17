@@ -94,7 +94,7 @@ The tables below show the results from our [paper](https://arxiv.org/abs/1911.03
 
 **Results for Each Model for F+M0 Bin:**
 
-|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |% Generated Responses in This Bin||
+|                 Model              | % Gendered Words |   % Male Bias  |    F1 Score    |% Generated Responses in This Bin |
 |                  :-:               |        :-:       |      :-:       |       :-:      |              :-:                 |
 |                Baseline            |        6.40      |      42.07     |      14.84     |             29.88                | 
 |                  CDA               |        6.16      |	     33.85     |      14.27     |	            31.04                |
