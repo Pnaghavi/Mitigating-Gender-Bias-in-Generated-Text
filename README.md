@@ -13,7 +13,7 @@ This method is an extension to the original paper. For this method, we originall
 
 ## Original Paper's Github Repository 
 
-In the original paper, Dinan et al. use the ParlAI infrastructure to run the experiments. The [genderation bias github repository](https://github.com/facebookresearch/ParlAI/tree/master/projects/genderation_bias) gives the necessary information on the paper. The general [Facebook research ParlAI bias github repository](https://github.com/facebookresearch/ParlAI) gives information about the pretrained model and datsets used for various research projects, including the [LIGHT](https://parl.ai/projects/light/#:~:text=The%20original%20LIGHT%20dataset%20features,interactions%20(talking%20and%20acting).) dataset.
+In the original paper, Dinan et al. use the ParlAI infrastructure to run the experiments. The [genderation bias github repository](https://github.com/facebookresearch/ParlAI/tree/master/projects/genderation_bias) gives the necessary information on the paper. The general [Facebook research ParlAI GitHub repository](https://github.com/facebookresearch/ParlAI) gives information about the pretrained model and datasets used for various research projects, including the [LIGHT](https://parl.ai/projects/light/#:~:text=The%20original%20LIGHT%20dataset%20features,interactions%20(talking%20and%20acting).) dataset.
 
 ## Reproduction and Extension Code
 
